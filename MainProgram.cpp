@@ -116,12 +116,16 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare an int variable
-
+    //t num;
     // TODO: Prompt and read it
-
+    //ut << "Enter an integer
+    //n >> num;
     // TODO: Use if / else if / else to print the correct message
-
-    cout << endl;
+    // (num > 0){
+      //cout << num << "is positive" << endl;
+//  }else if (num < 0){
+  //}
+    //ut << endl;
 
     // -----------------------------------------------------------------------
     // Exercise 2.2
@@ -133,9 +137,18 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two ints, prompt, and read them
-
+    int a;
+    int b;
+    cout << "Enter an integer";
+    cin >> a >> b ;
     // TODO: Write the if / else if / else chain
-
+    if (a==b){
+        cout << "equal" << endl;
+    }else if (a>b){
+        cout << "first is bigger" << endl;
+    }else{
+        cout << "second is bigger" << endl;
+    }
     cout << endl;
 }
 
@@ -153,9 +166,16 @@ void section3_guidedExercises() {
     // Hint: use the modulus operator (%).
     //   number % 2 == 0  means even.
     // -----------------------------------------------------------------------
+    int num;
+    cout << " Enter an integer";
+    cin >> num;
 
     // TODO: Implement the even/odd checker
-
+    if (num % 2 == 0){
+    cout << num << " is even" << endl;
+    }else{
+        cout << num << " is odd" << endl;
+    }
     cout << endl;
 
     // -----------------------------------------------------------------------
@@ -170,8 +190,23 @@ void section3_guidedExercises() {
     //
     // Also print "Invalid score" if the input is < 0 or > 100.
     // -----------------------------------------------------------------------
-
+    int score;
+    cout << " Enter your score (0-100) ";
+    cin >> score;
     // TODO: Implement the grade calculator
+    if (score < 0 || score > 100)
+    cout << "Invalid score";
+    }else if (score>=90){
+    cout << score << " is A " << endl;
+    }else if (score>=80){
+    cout << score << " is B " << endl;
+    }else if (score>=70){
+    cout << score << " is C " << endl;
+    }else if (score>=60){
+    cout << score << " is D " << endl;
+    }else{
+    cout << score << " is F " << endl;
+    }
 
     cout << endl;
 
@@ -187,6 +222,15 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the leap year checker
+    int year;
+    cout << "Enter an year";
+    cin >> year;
+    if ((year % 4 == 0 && year % 100 != 0 ) || (year % 400 ==0)){
+        cout << year << "is a leap year . " << endl;
+    }else{
+        cout << year << " is not a leap year. " << endl;
+    }
+        
 
     cout << endl;
 
@@ -207,6 +251,22 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the triangle validator and classifier
+    double s1 , s2 , s3;
+    cout << "Enter three side lengths:";
+    cin >> s1 >> s2 >> s3;
+    if(s1 + s2 > s3 && s1 + s3 > s2 && s2 + s3 > s1){
+        cout << "Valid triangle";
+        
+        if (s1 == s2 && s2 == s3) {
+            cout << "Type: Equilateral" << endl;
+        }else if (s1 == s2  ||s1 == s3 || s2 == s3 ){
+            cout << "Type: Isosceles" << endl;
+        }else{
+            cout << "Type Scalene" << endl;
+        }
+    }else{
+        cout << " NOt a valid triangle " endl;
+    }
 
     cout << endl;
 
